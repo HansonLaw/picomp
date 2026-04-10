@@ -1,0 +1,48 @@
+# piComp Installation Instructions
+
+Thank you for purchasing piComp! Here's how to install:
+
+## Installation Steps
+
+1. Extract the zip file to a folder
+2. Install dependencies:
+```
+npm install
+```
+
+3. Link the command globally:
+```
+npm link
+```
+
+4. That's it! You can now use `picomp` anywhere:
+```
+picomp -i ./my-images -o ./compressed
+```
+
+## Usage
+
+```
+picomp [options]
+
+Options:
+  -V, --version             output the version number
+  -i, --input <directory>   Input directory containing images (default: "./images")
+  -o, --output <directory>  Output directory for compressed images (default: "./compressed")
+  -q, --quality <number>    Quality (1-100) (default: "80")
+  -w, --maxWidth <number>   Maximum width in pixels (default: "1920")
+  -m, --maxHeight <number>  Maximum height in pixels (default: "1080")
+  -h, --help                display help for command
+```
+
+## Example
+
+```
+picomp -i ./photos -o ./compressed -q 80 -w 1920
+```
+
+## Support
+
+If you have any questions, email: luohonghao2017@gmail.com
+
+License: This is a single developer license.
