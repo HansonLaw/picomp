@@ -1,8 +1,8 @@
 @echo off
-echo Installing piComp...
+echo Installing DevTools Pro Bundle...
 echo.
 
-npm install
+call npm install
 if %errorlevel% neq 0 (
     echo Error: npm install failed!
     pause
@@ -10,19 +10,25 @@ if %errorlevel% neq 0 (
 )
 
 echo.
-npm link
-if %errorlevel% neq 0 (
-    echo Error: npm link failed!
-    pause
-    exit /b 1
-)
+echo Linking all tools...
+echo.
+
+call npm link picomp
+call npm link fileren
+call npm link textrepl
+call npm link extman
 
 echo.
 echo ========================================
-echo           Installation Complete!
+echo        Installation Complete!
 echo ========================================
 echo.
-echo You can now use 'picomp' from any command prompt!
+echo All 4 tools installed:
+echo   picomp  - Batch image compression
+echo   fileren - Batch file renaming
+echo   textrepl - Batch text replacement
+echo   extman  - File extension conversion
+echo.
 echo Try: picomp --help
 echo.
 pause

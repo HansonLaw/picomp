@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Installing piComp..."
+echo "Installing DevTools Pro Bundle..."
 echo
 
 npm install
@@ -10,17 +10,24 @@ if [ $? -ne 0 ]; then
 fi
 
 echo
-npm link
-if [ $? -ne 0 ]; then
-    echo "Error: npm link failed!"
-    exit 1
-fi
+echo "Linking all tools..."
+echo
+
+npm link picomp
+npm link fileren
+npm link textrepl
+npm link extman
 
 echo
 echo "========================================"
-echo "         Installation Complete!"
+echo "        Installation Complete!"
 echo "========================================"
 echo
-echo "You can now use 'picomp' from any terminal!"
+echo "All 4 tools installed:"
+echo "  picomp  - Batch image compression"
+echo "  fileren - Batch file renaming"
+echo "  textrepl - Batch text replacement"
+echo "  extman  - File extension conversion"
+echo
 echo "Try: picomp --help"
 echo

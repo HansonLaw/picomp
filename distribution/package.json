@@ -1,12 +1,8 @@
 {
-  "name": "picomp",
+  "name": "devtools-pro-bundle",
   "version": "1.0.0",
-  "description": "A powerful CLI tool for batch image compression. Reduce image sizes in bulk with ease.",
-  "main": "picomp.js",
-  "bin": {
-    "picomp": "picomp.js"
-  },
-  "keywords": ["image", "compression", "compress", "batch", "cli", "sharp", "image-optimization"],
+  "description": "DevTools Pro Bundle - 4 useful CLI tools for developers",
+  "keywords": ["image", "compression", "rename", "text-replace", "extension", "cli"],
   "author": "",
   "license": "Commercial",
   "dependencies": {

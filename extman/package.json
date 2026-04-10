@@ -1,0 +1,16 @@
+{
+  "name": "extman",
+  "version": "1.0.0",
+  "description": "A CLI tool for bulk file extension conversion. Convert all .js to .ts in one command.",
+  "main": "index.js",
+  "bin": {
+    "extman": "index.js"
+  },
+  "keywords": ["extension", "convert", "rename", "batch", "cli", "file"],
+  "author": "",
+  "license": "Commercial",
+  "dependencies": {
+    "chalk": "^5.6.2",
+    "commander": "^14.0.3"
+  }
+}

@@ -1,4 +1,4 @@
-# DevTools Bundle / 开发工具包
+# DevTools Pro Bundle / 开发工具专业包
 
 [English](#english) | [中文](#中文)
 
@@ -6,9 +6,9 @@
 
 ## English
 
-# DevTools Bundle - Collection of Useful CLI Tools for Developers
+# DevTools Pro Bundle - Collection of 4 Useful CLI Tools for Developers
 
-A collection of handy command-line tools that save you time every day.
+A collection of handy command-line tools that save you hours every week.
 
 ## What's Included
 
@@ -34,30 +34,51 @@ fileRen is a powerful CLI tool for batch file renaming. Rename multiple files wi
 - Convert to lowercase/uppercase
 - Filter by file extensions
 
+### 3. textRepl - Batch Text Replacement Tool
+
+textRepl is a powerful CLI tool for batch text replacement across multiple files. Search and replace text patterns recursively in entire codebases.
+
+**Features:**
+- Search and replace across hundreds of files
+- Regular expression support
+- Recursive directory search
+- Filter by file extensions
+- Perfect for bulk refactoring
+
+### 4. extMan - File Extension Converter
+
+extMan is a CLI tool for bulk file extension conversion. Convert all files from one extension to another in one command.
+
+**Features:**
+- Bulk convert file extensions
+- Recursive or single directory
+- Perfect for mass renaming .js to .ts
+- Fast and simple
+
 ## How to get
 
-DevTools Bundle is a commercial product. You can purchase a license for **$20 USD** (≈ 140 CNY):
+DevTools Pro Bundle is a commercial product. You can purchase a license for **$50 USD** (≈ 350 CNY):
 
 👉 **Buy now**: https://hansonlaw.github.io/picomp/
 
 After purchase, you will receive:
-- Full version of both tools
+- Full version of all 4 tools
 - Lifetime license for one developer
 - All future updates
 - Email support
 
 ## Pricing
 
-- **$20 USD** - Developer Bundle license (both tools included)
+- **$50 USD** - DevTools Pro Bundle license (all 4 tools included)
 - One-time payment, lifetime use
 
 ---
 
 ## 中文
 
-# DevTools Bundle - 实用命令行开发工具包
+# DevTools Pro Bundle - 开发工具专业包（4个实用CLI工具）
 
-收集了实用的命令行工具，每天帮你节省时间。
+收集了4个实用的命令行工具，每周帮你节省数小时。
 
 ## 包含工具
 
@@ -83,21 +104,42 @@ fileRen 是强大的批量文件重命名CLI工具，支持前缀、后缀、替
 - 大小写转换
 - 按文件扩展名过滤
 
+### 3. textRepl - 批量文本替换工具
+
+textRepl 是强大的批量文本替换CLI工具，在整个代码库中递归搜索替换文本模式。
+
+**功能：**
+- 跨数百个文件搜索替换
+- 支持正则表达式
+- 递归目录搜索
+- 按文件扩展名过滤
+- 非常适合批量重构
+
+### 4. extMan - 文件扩展名转换器
+
+extMan 是批量文件扩展名转换CLI工具，一键将所有文件从一个扩展名转换为另一个。
+
+**功能：**
+- 批量转换文件扩展名
+- 支持递归或单目录
+- 完美支持批量 .js 转 .ts
+- 快速简单
+
 ## 购买方式
 
-DevTools Bundle 是商业产品。你可以购买授权，价格 **$20 美元** (≈ 140 人民币):
+DevTools Pro Bundle 是商业产品。你可以购买授权，价格 **$50 美元** (≈ 350 人民币):
 
 👉 **立即购买**: https://hansonlaw.github.io/picomp/
 
 付款后你会收到：
-- 两个工具完整版本
+- 全部四个工具完整版本
 - 单开发者终身授权
 - 所有未来更新
 - 邮箱技术支持
 
 ## 价格
 
-- **$20 美元** - 开发者工具包授权（包含两个工具）
+- **$50 美元** - DevTools Pro Bundle 授权（包含全部四个工具）
 - 一次性付款，终身使用
 
 ---
