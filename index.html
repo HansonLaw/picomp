@@ -93,8 +93,30 @@
                             Developer support
                         </li>
                     </ul>
-                    <!-- PayPal Button -->
-                    <div id="paypal-button-container" class="w-full"></div>
+                    <!-- WeChat/Alipay Payment -->
+                    <div class="text-center">
+                        <p class="mb-4 text-gray-600">Scan QR code to pay $10 (≈ 70 CNY)</p>
+                        <div class="flex justify-center gap-8 mb-6">
+                            <div>
+                                <p class="font-medium mb-2">WeChat Pay</p>
+                                <div id="wechat-qr" class="border rounded-lg p-2 bg-white">
+                                    <img src="wechat-qr.png" alt="WeChat Pay QR Code" class="w-48 h-48">
+                                </div>
+                            </div>
+                            <div>
+                                <p class="font-medium mb-2">Alipay</p>
+                                <div id="alipay-qr" class="border rounded-lg p-2 bg-white">
+                                    <img src="alipay-qr.png" alt="Alipay QR Code" class="w-48 h-48">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 text-blue-800 text-sm">
+                            <p><strong>After payment:</strong></p>
+                            <p>1. Take a screenshot of your payment</p>
+                            <p>2. Email to luohonghao2017@gmail.com</p>
+                            <p>3. You'll receive the commercial license within 24 hours</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -105,7 +127,7 @@
         <div class="container mx-auto px-4 max-w-4xl">
             <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Easy to Use</h2>
             <div class="bg-gray-900 rounded-xl p-6 text-white overflow-x-auto">
-                <pre class="text-sm">
+<pre class="text-sm">
 <span class="text-green-400"># Install</span>
 npm install -g picomp
 
@@ -126,7 +148,7 @@ Total original: 4.52 MB
 Total compressed: 0.82 MB
 Total reduction: 81.86% saved!
 ==================================================
-                </pre>
+</pre>
             </div>
         </div>
     </section>
@@ -136,26 +158,5 @@ Total reduction: 81.86% saved!
             <p>&copy; 2026 piComp. Made with speed.</p>
         </div>
     </footer>
-
-    <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD"></script>
-    <script>
-        paypal.Buttons({
-            createOrder: function(data, actions) {
-                return actions.order.create({
-                    purchase_units: [{
-                        amount: {
-                            value: '10.00'
-                        },
-                        description: 'piComp Commercial License'
-                    }]
-                });
-            },
-            onApprove: function(data, actions) {
-                return actions.order.capture().then(function(details) {
-                    alert('Thank you for your purchase, ' + details.payer.name.given_name + '!');
-                });
-            }
-        }).render('#paypal-button-container');
-    </script>
 </body>
 </html>
