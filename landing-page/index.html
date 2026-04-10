@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>piComp - Batch Image Compression Tool</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(102, 126, 234, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Hero Section -->
+    <header class="gradient-bg text-white">
+        <div class="container mx-auto px-4 py-16 max-w-6xl">
+            <div class="text-center">
+                <h1 class="text-5xl font-bold mb-6">piComp</h1>
+                <p class="text-xl mb-8 opacity-90">The fastest way to compress hundreds of images at once</p>
+                <div class="bg-black bg-opacity-20 rounded-lg p-4 inline-block mb-8">
+                    <code class="text-sm">npm install -g picomp</code>
+                </div>
+                <div class="flex justify-center gap-4 flex-wrap">
+                    <a href="#buy" class="btn-primary text-white px-8 py-4 rounded-full font-semibold text-lg">Get Commercial License - $10</a>
+                    <a href="https://github.com" class="bg-white bg-opacity-20 backdrop-blur-sm text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-opacity-30 transition">View on GitHub</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Features -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Why Choose piComp?</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-6 bg-gray-50 rounded-xl">
+                    <div class="w-12 h-12 gradient-bg rounded-lg mb-4"></div>
+                    <h3 class="text-xl font-semibold mb-2">Batch Processing</h3>
+                    <p class="text-gray-600">Compress every image in a folder with one command. Perfect for websites, apps, and portfolios.</p>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-xl">
+                    <div class="w-12 h-12 gradient-bg rounded-lg mb-4"></div>
+                    <h3 class="text-xl font-semibold mb-2">Smart Resizing</h3>
+                    <p class="text-gray-600">Automatically resizes large images while maintaining aspect ratio and quality.</p>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-xl">
+                    <div class="w-12 h-12 gradient-bg rounded-lg mb-4"></div>
+                    <h3 class="text-xl font-semibold mb-2">Lightning Fast</h3>
+                    <p class="text-gray-600">Built on sharp - the fastest image processing library for Node.js.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="buy" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Get Your License Today</h2>
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden max-w-md mx-auto">
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold mb-4">Commercial License</h3>
+                    <div class="mb-6">
+                        <span class="text-5xl font-bold text-gray-900">$10</span>
+                        <span class="text-gray-600">one-time payment</span>
+                    </div>
+                    <ul class="mb-8 space-y-3">
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-2">✓</span>
+                            Lifetime use
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-2">✓</span>
+                            Commercial use
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-2">✓</span>
+                            All future updates
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-2">✓</span>
+                            Developer support
+                        </li>
+                    </ul>
+                    <!-- PayPal Button -->
+                    <div id="paypal-button-container" class="w-full"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Usage Example -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Easy to Use</h2>
+            <div class="bg-gray-900 rounded-xl p-6 text-white overflow-x-auto">
+                <pre class="text-sm">
+<span class="text-green-400"># Install</span>
+npm install -g picomp
+
+<span class="text-green-400"># Compress all images in ./photos to ./compressed</span>
+picomp -i ./photos -o ./compressed -q 80 -w 1920
+
+<span class="text-green-400"># Output shows compression results</span>
+Found 5 image(s) to compress...
+
+✓ photo1.jpg
+  Original: 2456.78 KB
+  Compressed: 456.23 KB
+  Reduction: 81.43%
+
+==================================================
+Completed! 5/5 images compressed.
+Total original: 4.52 MB
+Total compressed: 0.82 MB
+Total reduction: 81.86% saved!
+==================================================
+                </pre>
+            </div>
+        </div>
+    </section>
+
+    <footer class="gradient-bg text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2026 piComp. Made with speed.</p>
+        </div>
+    </footer>
+
+    <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD"></script>
+    <script>
+        paypal.Buttons({
+            createOrder: function(data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: '10.00'
+                        },
+                        description: 'piComp Commercial License'
+                    }]
+                });
+            },
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    alert('Thank you for your purchase, ' + details.payer.name.given_name + '!');
+                });
+            }
+        }).render('#paypal-button-container');
+    </script>
+</body>
+</html>
