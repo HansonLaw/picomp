@@ -212,27 +212,21 @@
                      </ul>
                       <!-- Payment Methods -->
                       <div class="text-center">
-                          <!-- PayPal for International -->
-                          <div data-lang="en" class="mb-6">
-                              <p class="mb-4 text-gray-600">Pay with PayPal (Credit Card accepted)</p>
-                              <div id="paypal-button-container" class="w-full"></div>
-                              <div class="my-4 border-t"></div>
-                          </div>
-                          <p data-lang="en" class="mb-4 text-gray-600">Or scan QR code for WeChat/Alipay:</p>
-                          <p data-lang="zh" class="mb-4 text-gray-600">扫码支付 $20 (≈ 140 元人民币)</p>
+                          <p data-lang="en" class="mb-4 text-gray-600">Scan QR code to pay $20 (≈ 140 CNY)<br>Visa / Credit Card supported via Alipay</p>
+                          <p data-lang="zh" class="mb-4 text-gray-600">扫码支付 ¥140 (≈ $20)<br>支持 Visa / 信用卡通过支付宝付款</p>
                           <div class="flex justify-center gap-6 mb-6 flex-wrap">
                               <div>
                                   <p data-lang="en" class="font-medium mb-2">WeChat Pay</p>
                                   <p data-lang="zh" class="font-medium mb-2">微信支付</p>
                                   <div id="wechat-qr" class="border rounded-lg p-2 bg-white">
-                                      <img src="wechat-qr.png" alt="WeChat Pay QR Code" class="w-44 h-44">
+                                      <img src="wechat-qr.png" alt="WeChat Pay QR Code" class="w-48 h-48">
                                   </div>
                               </div>
                               <div>
                                   <p data-lang="en" class="font-medium mb-2">Alipay</p>
                                   <p data-lang="zh" class="font-medium mb-2">支付宝</p>
                                   <div id="alipay-qr" class="border rounded-lg p-2 bg-white">
-                                      <img src="alipay-qr.png" alt="Alipay QR Code" class="w-44 h-44">
+                                      <img src="alipay-qr.png" alt="Alipay QR Code" class="w-48 h-48">
                                   </div>
                               </div>
                           </div>
@@ -293,40 +287,6 @@ Total reduction: 81.86% saved!
         document.addEventListener('DOMContentLoaded', function() {
             if (document.body.classList.contains('lang-en')) {
                 renderPayPalButton();
-            }
-        });
-
-        function renderPayPalButton() {
-            if (typeof paypal !== 'undefined') {
-                paypal.Buttons({
-                    createOrder: function(data, actions) {
-                        return actions.order.create({
-                            purchase_units: [{
-                                amount: {
-                                    value: '20.00'
-                                },
-                                description: 'DevTools Bundle License (both tools included)'
-                            }]
-                        });
-                    },
-                    onApprove: function(data, actions) {
-                        return actions.order.capture().then(function(details) {
-                            alert('Thank you for your purchase, ' + details.payer.name.given_name + '!');
-                            alert('Please email your payment confirmation to luohonghao2017@gmail.com to receive your license.');
-                        });
-                    }
-                }).render('#paypal-button-container');
-            }
-        }
-
-        // Re-render PayPal when language changes to English
-        const originalSwitchLang = window.switchLang;
-        window.switchLang = function(lang) {
-            originalSwitchLang(lang);
-            if (lang === 'en' && !document.querySelector('#paypal-button-container').hasChildNodes()) {
-                renderPayPalButton();
-            }
-        };
-    </script>
+ </footer>
 </body>
 </html>
