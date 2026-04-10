@@ -1,0 +1,16 @@
+{
+  "name": "fileren",
+  "version": "1.0.0",
+  "description": "A powerful CLI tool for batch file renaming. Rename multiple files with patterns, prefixes, suffixes and more.",
+  "main": "index.js",
+  "bin": {
+    "fileren": "index.js"
+  },
+  "keywords": ["file", "rename", "batch", "cli", "utility", "rename-files"],
+  "author": "",
+  "license": "Commercial",
+  "dependencies": {
+    "chalk": "^5.6.2",
+    "commander": "^14.0.3"
+  }
+}
